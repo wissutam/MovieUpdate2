@@ -4,10 +4,13 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -18,6 +21,7 @@ public class ReadOnly extends AppCompatActivity {
     TextView name_input, type_input, runtime_input, plot_input;
     String id, name, type, runtime, plot;
     ImageView MV_TYPE;
+    Button back_button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,6 +32,7 @@ public class ReadOnly extends AppCompatActivity {
         runtime_input = findViewById(R.id.movie_runtime_text_view);
         plot_input = findViewById(R.id.movie_plot_text_view);
         MV_TYPE = findViewById(R.id.movie_image_view);
+        back_button = findViewById(R.id.back_button);
         getAndSetIntentData();
 
         //Set actionbar title after getAndSetIntentData method
@@ -35,6 +40,14 @@ public class ReadOnly extends AppCompatActivity {
         if (ab != null) {
             ab.setTitle(name);
         }
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadOnly.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 

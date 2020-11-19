@@ -2,6 +2,7 @@ package com.jovanovic.stefan.sqlitetutorial;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 public class AddActivity extends AppCompatActivity {
 
     EditText name_input, type_input, runtime_input, plot_input;
-    Button add_button;
+    Button add_button, back_button;
     RadioGroup GM;
    // RadioButton R_adventure,R_comedy,R_drama,R_erotica,R_fantasy,R_horror,R_sci_fi,R_western;
     String TypeString;
@@ -29,6 +30,7 @@ public class AddActivity extends AppCompatActivity {
         runtime_input = findViewById(R.id.runtime_input);
         plot_input = findViewById(R.id.plot_input);
         add_button = findViewById(R.id.add_button);
+        back_button = findViewById(R.id.back_button);
         GM = findViewById(R.id.RG_Movie);
         /*R_adventure = findViewById(R.id.radioButton_adventure);
         R_comedy = findViewById(R.id.radioButton_comedy);
@@ -63,10 +65,14 @@ public class AddActivity extends AppCompatActivity {
                 startActivity(intent);
 
 
+            }
+        });
 
-
-
-
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AddActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
     }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import android.widget.Toast;
 public class UpdateActivity extends AppCompatActivity {
 
     EditText name_input, type_input, runtime_input, plot_input;
-    Button update_button, delete_button;
+    Button update_button, delete_button, back_button;
     RadioGroup GM2;
     String id, name, type, runtime, plot;
     String TypeString2;
@@ -35,6 +36,7 @@ public class UpdateActivity extends AppCompatActivity {
         plot_input = findViewById(R.id.plot_input2);
         update_button = findViewById(R.id.update_button);
         delete_button = findViewById(R.id.delete_button);
+        back_button = findViewById(R.id.back_button);
         R_adventure2 = findViewById(R.id.radioButton_adventure2);
         R_comedy2 = findViewById(R.id.radioButton_comedy);
         R_drama2 = findViewById(R.id.radioButton_drama2);
@@ -86,6 +88,14 @@ public class UpdateActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 confirmDialog();
+            }
+        });
+
+        back_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(UpdateActivity.this, MainActivity.class);
+                startActivity(intent);
             }
         });
 
