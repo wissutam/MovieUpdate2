@@ -5,7 +5,7 @@
         android:angle="90"
         android:centerColor="#F2F2F2"
         android:endColor="#A4A4A4"
-        android:startColor="#F2F2F2"/>
+        android:startColor="#A4A4A4"/>
 
     <padding
         android:bottom="7dp"
