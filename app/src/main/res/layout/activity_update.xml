@@ -142,9 +142,9 @@
         android:inputType="number"
         android:textColorHint="#000000"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/RG_Movie2"
         app:layout_constraintHorizontal_bias="0.503"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/RG_Movie2"
         app:layout_constraintTop_toBottomOf="@+id/type_input2" />
 
     <EditText
