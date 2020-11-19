@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:padding="30dp"
+    tools:context=".AddActivity">
+
+    <RadioGroup
+        android:id="@+id/RG_Movie2"
+        android:layout_width="200dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/runtime_input2"
+        app:layout_constraintEnd_toEndOf="@+id/movie_input2"
+        app:layout_constraintStart_toStartOf="@+id/movie_input2"
+        app:layout_constraintTop_toBottomOf="@+id/movie_input2">
+
+        <RadioButton
+            android:id="@+id/radioButton_adventure2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:shadowColor="#007A3131"
+            android:text="adventure"
+            android:textColor="#FF9800"
+            android:textColorHint="#000000"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_comedy2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="comedy"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_drama2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="drama"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_erotica2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="erotica"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_fantasy2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="fantasy"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_horror2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="horror"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_sci_fi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="sci_fi"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton_western2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="casual"
+            android:paddingLeft="5dp"
+            android:text="western"
+            android:textColor="#FF9800"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/movie_input2"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="#D3D2D2"
+        android:hint="Movie"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/type_input2"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#D3D2D2"
+        android:ems="10"
+        android:hint="Movie Genres"
+        android:inputType="textPersonName"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/movie_input2"
+        tools:visibility="gone" />
+
+    <EditText
+        android:id="@+id/runtime_input2"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="304dp"
+        android:background="#D3D2D2"
+        android:ems="10"
+        android:hint="Running time"
+        android:inputType="number"
+        android:textColorHint="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type_input2" />
+
+    <EditText
+        android:id="@+id/plot_input2"
+        android:layout_width="262dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="16dp"
+        android:background="#D3D2D2"
+        android:ems="10"
+        android:hint="Plot"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/runtime_input2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/runtime_input2"
+        app:layout_constraintTop_toBottomOf="@+id/runtime_input2" />
+
+    <Button
+        android:id="@+id/update_button"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_button_pressed"
+        android:text="Update"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/delete_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/plot_input2" />
+
+    <Button
+        android:id="@+id/delete_button"
+        android:layout_width="100dp"
+        android:layout_height="52dp"
+        android:background="@drawable/bg_button_pressed"
+        android:text="Delete"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/update_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/update_button"
+        app:layout_constraintTop_toTopOf="@+id/update_button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Movie Genres"
+        android:textColor="#FFEB3B"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/movie_input2"
+        app:layout_constraintTop_toBottomOf="@+id/movie_input2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
